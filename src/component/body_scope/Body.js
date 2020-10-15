@@ -3,14 +3,14 @@ import '../../App.css';
 import Home from './Home';
 import Portfolio from './Portfolio';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 function Body() {
   return (
-    <BrowserRouter>
+    <HashRouter basename='/'>
         <Route path='/' component={Home} />
         <Route path='/portfolio' component={Portfolio} />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

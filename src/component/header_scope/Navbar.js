@@ -1,11 +1,14 @@
 import React from 'react';
+import { HashRouter, Route, Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="nav-wrapper">
       <div className="container">
-        <a href="/home" className="">Home</a>
-        <a href="/portfolio" className="">Porfolio</a>
+        <HashRouter basename="/">
+          <Link to="/">Home</Link>
+          <Link to="/portfolio">Porfolio</Link>
+        </HashRouter>
       </div>
     </nav>
   );
