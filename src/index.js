@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
+import Header from './component/header_scope/Header';
+import Home from './component/body_scope/Home';
+import Portfolio from './component/body_scope/Portfolio';
+
+import { BrowserRouter, Route } from 'react-router-dom';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter basename={ process.env.PUBLIC_URL }>
+        <Header />
+        <Route exact path='/' component={Home} />
+        <Route path='/home' component={Home} />
+        <Route path='/portfolio' component={Portfolio} />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
