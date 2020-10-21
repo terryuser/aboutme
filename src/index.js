@@ -6,7 +6,9 @@ import Header from './component/header_scope/Header';
 import Home from './component/body_scope/Home';
 import Portfolio from './component/body_scope/Portfolio';
 
-import { HashRouter, Route } from 'react-router-dom';
+import SwitchWithSlide from './component/tools/SwitchWithSlide';
+
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -14,9 +16,11 @@ ReactDOM.render(
   <React.StrictMode>
       <HashRouter  basename='/'>
         <Header />
-        <Route exact path='/' component={Home} />
-        <Route path='/home' component={Home} />
-        <Route path='/portfolio' component={Portfolio} />
+        <SwitchWithSlide>
+          <Route exact path='/' component={Home} />
+          <Route path='/home' component={Home} />
+          <Route path='/portfolio' component={Portfolio} />
+        </SwitchWithSlide>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
