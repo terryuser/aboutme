@@ -1,26 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 
-import Header from './component/header_scope/Header';
-import Home from './component/body_scope/Home';
-import Portfolio from './component/body_scope/Portfolio';
-
-import SwitchWithSlide from './component/tools/SwitchWithSlide';
-
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route, useLocation } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
+import Main from './component/Main';
+import Header from './component/header_scope/Header';
+
 ReactDOM.render(
   <React.StrictMode>
-      <HashRouter  basename='/'>
-        <Header />
-        <SwitchWithSlide>
-          <Route exact path='/' component={Home} />
-          <Route path='/home' component={Home} />
-          <Route path='/portfolio' component={Portfolio} />
-        </SwitchWithSlide>
+    <HashRouter  basename='/'>
+      <Header />
+      <Main />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
