@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../logo.svg';
-import '../useless/App.css';
 
 import { AnimatePresence, motion } from 'framer-motion';
 

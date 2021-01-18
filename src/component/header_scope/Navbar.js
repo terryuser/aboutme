@@ -10,22 +10,24 @@ function Navbar() {
 
   return (
     <AnimateSharedLayout>
-      <nav className="nav-wrapper">
-        <div className="container">
+      <nav className="navbar">
+        <ul className="nav-wrapper">
             {pages.map(({title, path, filename}) => (
-              <NavLink to={path} exact className="nav-item" activeClassName="active" isActive={isActive.bind(this, {path})}> 
-                {title}
-                {location.pathname == path && (
-                  <motion.div 
-                    layoutId="underline" 
-                    className="underline" 
-                    initial={false} 
-                    animate={ {background: '#000'} } 
-                  />
-                )}
-              </NavLink>
+              <li>
+                <NavLink to={path} exact className="nav-item" activeClassName="active" isActive={isActive.bind(this, {path})}> 
+                  {title}
+                  {location.pathname == path && (
+                    <motion.div 
+                      layoutId="underline" 
+                      className="underline" 
+                      initial={false} 
+                      animate={ {background: '#000'} } 
+                    />
+                  )}
+                </NavLink>
+              </li>
             ))}
-        </div>
+        </ul>
       </nav>
     </AnimateSharedLayout>
   );

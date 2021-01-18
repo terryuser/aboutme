@@ -20,7 +20,7 @@ import '../scss/main.scss';
 function Main() {
     const location = useLocation();
     return (
-        <div className="Main">
+        <div className="main-frame">
             <AnimatePresence>
                 <Switch location={location} key={location.pathname}>
                     <Route exact path='/' component={Home} />

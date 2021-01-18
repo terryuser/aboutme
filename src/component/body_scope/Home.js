@@ -1,5 +1,4 @@
 import React from 'react';
-import '../useless/App.css';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
