@@ -14,6 +14,8 @@ import { AnimatePresence } from 'framer-motion';
 
 import { pages } from "../config/pageTitle";
 
+import '../scss/main.scss';
+
 
 function Main() {
     const location = useLocation();
