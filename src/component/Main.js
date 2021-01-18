@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../index.css';
-
 import Home from './body_scope/Home';
 import Portfolio from './body_scope/Portfolio';
 import Contact from './body_scope/Contact';
-
-import SwitchWithSlide from './tools/SwitchWithSlide';
 
 import { HashRouter, Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';

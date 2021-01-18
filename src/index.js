@@ -6,7 +6,7 @@ import { HashRouter, Switch, Route, useLocation } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 import Main from './component/Main';
-import Header from './component/header_scope/Header';
+import Header from './component/Header';
 
 ReactDOM.render(
   <React.StrictMode>

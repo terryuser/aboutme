@@ -13,8 +13,8 @@ function Navbar() {
       <nav className="navbar">
         <ul className="nav-wrapper">
             {pages.map(({title, path, filename}) => (
-              <li>
-                <NavLink to={path} exact className="nav-item" activeClassName="active" isActive={isActive.bind(this, {path})}> 
+              <li className="nav-item">
+                <NavLink to={path} exact className="nav-link" activeClassName="active" isActive={isActive.bind(this, {path})}> 
                   {title}
                   {location.pathname == path && (
                     <motion.div 
