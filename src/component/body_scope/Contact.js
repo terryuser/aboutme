@@ -9,11 +9,13 @@ import pageVariants from '../../config/pageVariants.json';
 function Contact() {
   return (
     <motion.div className="page" initial="init" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
-      <div className="App-header">
-        <p>
-          Contact
-        </p>
-      </div>
+      <div className="">Have a question or want to work together?</div>
+      <from>
+        <div>
+          <label>Email: </label>
+          <input type="text" />
+        </div>
+      </from>
     </motion.div>
   );
 }
