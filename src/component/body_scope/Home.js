@@ -8,11 +8,13 @@ import pageVariants from '../../config/pageVariants.json';
 function Home() {
   return (
     <motion.div className="page" initial="init" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
-      <div className="App-header">
-        <p>
-          Hi!
-        </p>
-      </div>
+      <section className="section greeting">
+        <div>Hi!</div>
+        <button>Who am I?</button>
+      </section>
+      <section className="section about-me">
+        <p>Hi, I'm Terry. A Front-end Web Developer.</p>
+      </section>
     </motion.div>
   );
 }
