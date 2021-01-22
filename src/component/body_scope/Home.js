@@ -14,6 +14,7 @@ function Home() {
       </section>
       <section className="section about-me">
         <p>Hi, I'm Terry. A Front-end Web Developer.</p>
+        <button>Skills & experence</button>
       </section>
     </motion.div>
   );

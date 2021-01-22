@@ -1,8 +1,11 @@
-@import './_font.scss';
+@import './_font';
 @import './value';
 
+@import './footer';
+
 body {
-    background-color: #cccccc;
+    background-color: $grey-mid;
+    margin: 0;
 }
 
 a {

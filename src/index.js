@@ -7,12 +7,14 @@ import * as serviceWorker from './serviceWorker';
 
 import Main from './component/Main';
 import Header from './component/Header';
+import Footer from './component/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter  basename='/'>
       <Header />
       <Main />
+      <Footer />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')

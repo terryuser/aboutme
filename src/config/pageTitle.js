@@ -10,6 +10,11 @@ export const pages = [
         filename: "Portfolio"
     },
     {
+        title: "Profile",
+        path: "/profile",
+        filename: "Profile"
+    },
+    {
         title: "Contact",
         path: "/contact",
         filename: "Contact"
