@@ -6,7 +6,7 @@ import Logo from '../img/LOGO.svg';
 function Header() {
   return (
     <header className="header">
-      <div class="logo"><img src={Logo} className="logo-svg" alt="Terry Lau - FrontEnd Developer" /></div>
+      <div className="logo"><img src={Logo} className="logo-svg" alt="Terry Lau - FrontEnd Developer" /></div>
       <Navbar />
     </header>
   );

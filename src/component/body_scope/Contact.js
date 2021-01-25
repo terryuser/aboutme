@@ -10,12 +10,27 @@ function Contact() {
   return (
     <motion.div className="page" initial="init" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
       <div className="">Have a question or want to work together?</div>
-      <from>
-        <div>
-          <label>Email: </label>
-          <input type="text" />
+      <div className="row">
+        <div className="col-6">
+          <form className="custom-form p-2">
+            <div className="input-container">
+              <label>Name </label>
+              <input type="text" />
+            </div>
+            <div className="input-container">
+              <label>Email/Phone</label>
+              <input type="text" />
+            </div>
+            <div className="input-container">
+              <label>What would you like to say to me? </label>
+              <input type="textarea" />
+            </div>
+          </form>
         </div>
-      </from>
+        <div className="col-6">
+          <img width="50" height="50"></img>
+        </div>
+      </div>
     </motion.div>
   );
 }

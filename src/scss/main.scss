@@ -1,10 +1,13 @@
 @import './_font';
 @import './value';
+@import './bootstrap';
 
+@import './form';
 @import './footer';
 
 body {
-    background-color: $grey-mid;
+    // background-color: $secondary;
+    background: url("../img/7285.jpg");
     margin: 0;
 }
 
