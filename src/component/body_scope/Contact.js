@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React, { useEffect, useState } from 'react';
+import letter from '../../img/letter.svg';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -7,11 +7,27 @@ import pageTransition from '../../config/pageTransition.json';
 import pageVariants from '../../config/pageVariants.json';
 
 function Contact() {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <motion.div className="page" initial="init" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
       <div className="">Have a question or want to work together?</div>
-      <div className="row">
-        <div className="col-6">
+      <div className="row justify-content-center">
+        <div className="mr-n5">
+          <img src={letter} width={width*0.4}/>
+        </div>
+        <div className="">
           <form className="custom-form p-2">
             <div className="input-container">
               <label>Name </label>
@@ -26,9 +42,6 @@ function Contact() {
               <input type="textarea" />
             </div>
           </form>
-        </div>
-        <div className="col-6">
-          <img width="50" height="50"></img>
         </div>
       </div>
     </motion.div>
