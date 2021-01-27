@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import letter from '../../img/letter.svg';
+import letter from '../../img/letter.png';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
