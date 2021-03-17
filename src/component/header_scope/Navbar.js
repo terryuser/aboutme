@@ -14,14 +14,14 @@ function Navbar() {
         <ul className="nav-wrapper">
             {pages.map(({title, path, filename}) => (
               <li className="nav-item" key={title.toString()}>
-                <NavLink to={path} exact className="nav-link" activeClassName="active" isActive={isActive.bind(this, {path})}> 
+                <NavLink to={path} exact className="nav-link text-thirdary" activeClassName="active" isActive={isActive.bind(this, {path})}> 
                   {title}
                   {location.pathname == path && (
                     <motion.div 
                       layoutId="underline" 
                       className="underline" 
                       initial={false} 
-                      animate={ {background: '#000'} } 
+                      animate={ {background: '#F6CD46'} } 
                     />
                   )}
                 </NavLink>

@@ -9,8 +9,6 @@ import Contact from './body_scope/Contact';
 import { HashRouter, Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
-import { pages } from "../config/pageTitle";
-
 import '../scss/main.scss';
 
 
