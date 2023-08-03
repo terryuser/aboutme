@@ -1,0 +1,21 @@
+$project-card-bg: #2e2e2e;
+$project-card-name: white;
+$project-card-content: #9c9c9c;
+
+.projects-card {
+  background-color: $project-card-bg;
+}
+
+.projects-card-content {
+  color: $project-card-content;
+}
+
+.projects-thumbnail {
+  overflow: hidden;
+
+  img {
+    min-width: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover;
+  }
+}

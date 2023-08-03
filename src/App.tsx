@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import { Helmet } from "react-helmet";
 
-function App() {
+import GlobalContextProvider from "./context/GlobalContext";
+import { Header, Intro, Skills, Projects } from "@components/index";
+
+import logo from "./logo.svg";
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Terry Lau - Frontend Developer</title>
+        <link rel="icon" href="/aboutme/favicon.ico" />
+        <link rel="canonical" href="https://terryuser.github.io/aboutme" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+      <GlobalContextProvider>
+        <Header />
+        <div className="main-content">
+          <Intro />
+          <Skills />
+          <Projects />
+        </div>
+      </GlobalContextProvider>
+    </>
   );
-}
+};
 
 export default App;

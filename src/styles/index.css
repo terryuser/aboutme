@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #1f1f1f;
+}
+
+body {
+  margin: 0;
+  font-family: "Bai Jamjuree", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #fccb3e;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.section-title {
+  color: #fccb3e;
+}
+
+@layer components {
+  .custom-cards {
+    @apply h-full overflow-hidden rounded-md drop-shadow-lg;
+  }
+
+  .custom-section {
+    @apply flex h-screen items-center justify-center;
+  }
+
+  .section-title {
+    @apply mb-2 text-5xl font-bold;
+  }
+}

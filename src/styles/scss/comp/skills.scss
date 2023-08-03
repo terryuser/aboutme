@@ -1,0 +1,55 @@
+$borderWidth: 15px;
+$borderSize: 2px;
+$borderColor: white;
+
+.skills-card-title {
+  padding-left: 25px;
+}
+
+.skills-card-border-left {
+  height: 100%;
+
+  &:after {
+    content: "";
+    width: $borderWidth;
+    height: $borderSize;
+    position: absolute;
+    background: $borderColor;
+    left: 0;
+    top: 0;
+  }
+
+  &:before {
+    content: "";
+    width: $borderWidth;
+    height: $borderSize;
+    position: absolute;
+    background: $borderColor;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.skills-card-border-right {
+  height: 100%;
+
+  &:after {
+    content: "";
+    width: $borderWidth;
+    height: $borderSize;
+    position: absolute;
+    background: $borderColor;
+    right: 0;
+    top: 0;
+  }
+
+  &:before {
+    content: "";
+    width: $borderWidth;
+    height: $borderSize;
+    position: absolute;
+    background: $borderColor;
+    right: 0;
+    bottom: 0;
+  }
+}
