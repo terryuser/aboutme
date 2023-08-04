@@ -1,12 +1,33 @@
 import { SkillCateData } from "@components/skills/type";
 
 import {
-  Bootstrap,
+  HTML5,
+  CSS3,
   Javascript,
-  MongoDB,
-  NextJS,
-  RxJS,
+  Typescript,
   SCSS,
+  NextJS,
+  React,
+  RxJS,
+  Git,
+  Bootstrap,
+  MongoDB,
+  MUI,
+  Rollup,
+  Lerna,
+  Figma,
+  VScode,
+  Postman,
+  WordPress,
+  GA,
+  threeDmax,
+  AdobeIllustrator,
+  AdobePhotoshop,
+  AdobeAfterEffect,
+  AdobeIndesign,
+  AdobePremiere,
+  SQL,
+  MySQL,
 } from "@images/svgx";
 
 export const SkillSet: SkillCateData[] = [
@@ -14,28 +35,60 @@ export const SkillSet: SkillCateData[] = [
     title: "Skills",
     items: [
       {
-        icon: NextJS,
-        name: "NextJS",
+        icon: HTML5,
+        name: "HTML",
       },
       {
-        icon: SCSS,
-        name: "SCSS",
+        icon: CSS3,
+        name: "CSS",
       },
       {
         icon: Javascript,
         name: "Javascript",
       },
       {
-        icon: MongoDB,
-        name: "MongoDB",
+        icon: Typescript,
+        name: "TypeScript",
+      },
+      {
+        icon: SCSS,
+        name: "SCSS",
+      },
+      {
+        icon: NextJS,
+        name: "NextJS",
+      },
+      {
+        icon: React,
+        name: "React",
       },
       {
         icon: RxJS,
         name: "RxJS",
       },
       {
+        icon: Git,
+        name: "Git",
+      },
+      {
+        icon: SQL,
+        name: "SQL",
+      },
+      {
         icon: Bootstrap,
         name: "Bootstrap",
+      },
+      {
+        icon: MUI,
+        name: "Material UI",
+      },
+      {
+        icon: Lerna,
+        name: "Lerna",
+      },
+      {
+        icon: Rollup,
+        name: "Rollup.js",
       },
     ],
   },
@@ -43,28 +96,56 @@ export const SkillSet: SkillCateData[] = [
     title: "Software",
     items: [
       {
-        icon: NextJS,
-        name: "NextJS",
+        icon: Figma,
+        name: "Figma",
       },
       {
-        icon: SCSS,
-        name: "SCSS",
+        icon: VScode,
+        name: "VScode",
       },
       {
-        icon: Javascript,
-        name: "Javascript",
+        icon: Postman,
+        name: "Postman",
+      },
+      {
+        icon: MySQL,
+        name: "MySQL",
       },
       {
         icon: MongoDB,
         name: "MongoDB",
       },
       {
-        icon: RxJS,
-        name: "RxJS",
+        icon: WordPress,
+        name: "WordPress",
       },
       {
-        icon: Bootstrap,
-        name: "Bootstrap",
+        icon: GA,
+        name: "Google Analytics",
+      },
+      {
+        icon: threeDmax,
+        name: "3D max",
+      },
+      {
+        icon: AdobeIllustrator,
+        name: "Adobe illustrator",
+      },
+      {
+        icon: AdobePhotoshop,
+        name: "Adobe Photoshop",
+      },
+      {
+        icon: AdobeAfterEffect,
+        name: "Adobe AfterEffect",
+      },
+      {
+        icon: AdobeIndesign,
+        name: "Adobe Indesign",
+      },
+      {
+        icon: AdobePremiere,
+        name: "Adobe Premiere Pro",
       },
     ],
   },

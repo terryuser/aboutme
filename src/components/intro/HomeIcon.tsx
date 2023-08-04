@@ -1,10 +1,6 @@
 import { FC, useRef, useEffect } from "react";
 import _ from "lodash";
-import { Home_icon_bg } from "@images/svgx";
-
-const bgID = "home-icon-bg";
-
-const blinkID = "blink-icon-bg";
+import { HomeDesktop, HomeDeveloper, HomeFloor } from "@images/svgx";
 
 const HomeIcon: FC = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -16,8 +12,6 @@ const HomeIcon: FC = () => {
 
     if (!wrapperComp) return;
 
-    const bgEl = wrapperComp.querySelector(`#${bgID}`);
-
     // const interval = randomBlink(bgEl);
 
     return () => {
@@ -25,9 +19,43 @@ const HomeIcon: FC = () => {
     };
   }, []);
 
+  const groupClass = "absolute w-full h-full top-0 left-0";
+
+  const IconSize = 500;
+
   return (
-    <div ref={wrapperRef}>
-      <Home_icon_bg id={bgID} />
+    <div
+      className="relative"
+      style={{
+        width: IconSize,
+        height: IconSize,
+      }}
+      ref={wrapperRef}
+    >
+      <g
+        className={groupClass}
+        style={{
+          zIndex: 1,
+        }}
+      >
+        <HomeDeveloper />
+      </g>
+      <g
+        className={groupClass}
+        style={{
+          zIndex: 1,
+        }}
+      >
+        <HomeDesktop />
+      </g>
+      <g
+        className={groupClass}
+        style={{
+          zIndex: 0,
+        }}
+      >
+        <HomeFloor />
+      </g>
     </div>
   );
 };

@@ -8,11 +8,11 @@ const SkillItem: FC<SkillItems> = (props) => {
   const divRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="block p-2 text-center">
-      <div className="flex justify-center" ref={divRef}>
+    <div className="block p-1 my-2 text-center">
+      <div className="flex justify-center pb-1" ref={divRef}>
         <IconSVG width={45} height={45} />
       </div>
-      <div className="text-white">{name}</div>
+      <div className="h-8 text-white text-sm leading-none">{name}</div>
     </div>
   );
 };
