@@ -1,38 +1,61 @@
 import { FC, useRef } from "react";
-// import Image from "next/image"
-import { content_en } from "@src/constant/intro";
-// import { Button } from "@components/utils"
+
 import { useGlobalContext } from "@src/context/GlobalContext";
 
-import { HomeIcon } from ".";
+import { useIsMobile, useIsTablet } from "@hook/useWindowSize";
+
+import { HomeIcon, Desc } from ".";
 
 const HomeIntro: FC = () => {
-  const titleRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
+
   const { headerHeight } = useGlobalContext();
 
-  const {
-    HomeIntro: { title, content },
-  } = content_en;
+  const iconWrapperRef = useRef<HTMLDivElement>(null);
+
+  const chopWidth = isMobile || isTablet ? 0 : 50;
+
+  const iconSize = {
+    width: isMobile ? 400 : isTablet ? 600 : 1098.55,
+    height: isMobile ? 280 : isTablet ? 420 : 771.15,
+  };
 
   return (
-    <div
-      className="flex overflow-hidden p-5"
+    <section
+      className="custom-section"
       style={{
-        marginTop: headerHeight,
+        marginTop: isMobile || isTablet ? headerHeight : headerHeight + 50,
       }}
     >
-      <div>
-        <div className="text-3xl font-bold text-white" ref={titleRef}>
-          {title}
+      <div className="container">
+        <div className="block lg:grid grid-cols-2 gap-2 p-5">
+          <div
+            className="px-5"
+            style={{
+              marginRight: chopWidth * -0.8,
+              marginTop: isMobile || isTablet ? 10 : "25%",
+            }}
+          >
+            <Desc />
+          </div>
+          <div
+            className="overflow-hidden flex justify-center items-end"
+            style={{ marginLeft: chopWidth * -1 }}
+          >
+            <div
+              ref={iconWrapperRef}
+              style={{
+                marginRight: chopWidth * -1,
+                left: chopWidth,
+              }}
+            >
+              <HomeIcon size={iconSize} />
+            </div>
+          </div>
         </div>
-        <div className="text-3md text-white">{content}</div>
-        {/* <Button content="More" /> */}
       </div>
-      <div>
-        <HomeIcon />
-        {/* <Image src="/pc.png" alt="pc" width={500} height={500} /> */}
-      </div>
-    </div>
+    </section>
   );
 };
 

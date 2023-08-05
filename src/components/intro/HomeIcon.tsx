@@ -1,17 +1,16 @@
 import { FC, useRef, useEffect } from "react";
 import _ from "lodash";
-import { HomeDesktop, HomeDeveloper, HomeFloor } from "@images/svgx";
+import { HomeSVGIcon } from "@images/svgx";
 
-const HomeIcon: FC = () => {
-  const wrapperRef = useRef<HTMLDivElement>(null);
+interface HomeIconPropsType {
+  size?: {
+    width: number;
+    height: number;
+  };
+}
 
+const HomeIcon: FC<HomeIconPropsType> = ({ size }) => {
   useEffect(() => {
-    console.log("Home Icon bg ref", wrapperRef.current);
-
-    const wrapperComp = wrapperRef.current;
-
-    if (!wrapperComp) return;
-
     // const interval = randomBlink(bgEl);
 
     return () => {
@@ -19,43 +18,9 @@ const HomeIcon: FC = () => {
     };
   }, []);
 
-  const groupClass = "absolute w-full h-full top-0 left-0";
-
-  const IconSize = 500;
-
   return (
-    <div
-      className="relative"
-      style={{
-        width: IconSize,
-        height: IconSize,
-      }}
-      ref={wrapperRef}
-    >
-      <g
-        className={groupClass}
-        style={{
-          zIndex: 1,
-        }}
-      >
-        <HomeDeveloper />
-      </g>
-      <g
-        className={groupClass}
-        style={{
-          zIndex: 1,
-        }}
-      >
-        <HomeDesktop />
-      </g>
-      <g
-        className={groupClass}
-        style={{
-          zIndex: 0,
-        }}
-      >
-        <HomeFloor />
-      </g>
+    <div>
+      <HomeSVGIcon width={size?.width} height={size?.height} />
     </div>
   );
 };

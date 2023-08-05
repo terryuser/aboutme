@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { SkillsContent } from "@constant/skills";
 
-export const Desc = () => {
+export const Desc: FC = () => {
   const { title, content, remark } = SkillsContent;
 
   return (

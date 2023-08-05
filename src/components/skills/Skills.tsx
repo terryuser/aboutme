@@ -8,7 +8,7 @@ interface SkillsProps {}
 
 const Skills: FC<SkillsProps> = () => {
   return (
-    <section className="custom-section">
+    <section className="custom-section" id="section-skills">
       <div className="container">
         <div className="mx-auto mb-2 w-2/3 text-center">
           <Desc />

@@ -8,6 +8,8 @@ import SkillItem from "./SkillItem";
 
 import { ArrowUp, ArrowDown } from "@images/svgx";
 
+import { useIsMobile, useIsTablet } from "@hook/useWindowSize";
+
 import "@styles/scss/comp/skills.scss";
 
 interface SkillCardProps {
@@ -17,7 +19,11 @@ interface SkillCardProps {
 
 const SkillCard: FC<SkillCardProps> = (props) => {
   const { title, data } = props;
-  const firstViewItemsAmount = 8;
+
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
+
+  const firstViewItemsAmount = isMobile ? 4 : 8;
 
   const previewItmes = data.slice(0, firstViewItemsAmount);
   const remainItems = data.slice(firstViewItemsAmount);
@@ -28,14 +34,14 @@ const SkillCard: FC<SkillCardProps> = (props) => {
     <div className="w-1/2 px-5">
       <div className={`relative border-x-2 py-2 px-4`}>
         <div className={"skills-card-border-left"} />
-        <div className="grid grid-cols-4 gap-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
           {previewItmes.map((item) => (
             <SkillItem {...item} />
           ))}
         </div>
 
         <Collapse in={isExpand} unmountOnExit>
-          <div className="grid grid-cols-4 gap-1">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
             {remainItems.map((item) => (
               <SkillItem {...item} />
             ))}

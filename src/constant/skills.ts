@@ -154,7 +154,7 @@ export const SkillSet: SkillCateData[] = [
 export const SkillsContent = {
   title: "Skills",
   content:
-    "With over 4 years of industry experience, I have honed my frontend skills to expertly analyze customer behavior and create web applications that deliver exceptional value and impact. I am committed to constructing user-friendly interfaces that optimize user experiences.",
+    "With over 5 years of industry experience, I have honed my skills to expertly analyze customer behavior and create web applications that deliver exceptional value and impact. I am committed to constructing user-friendly interfaces that optimize user experiences.",
   remark:
     "Visit my <a href='https://www.linkedin.com/in/terrylauhm' target='_blank'>Linkedin profile</a> for more details.",
 };

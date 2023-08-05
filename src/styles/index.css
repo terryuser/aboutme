@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --main-color: #fccb3e;
+  --main-text-color: #1f1f1f;
+}
+
 html {
   background-color: #1f1f1f;
 }
@@ -14,7 +19,7 @@ body {
 }
 
 a {
-  color: #fccb3e;
+  color: var(--main-color);
 }
 
 a:hover {
@@ -22,7 +27,7 @@ a:hover {
 }
 
 .section-title {
-  color: #fccb3e;
+  color: var(--main-color);
 }
 
 @layer components {
@@ -31,7 +36,7 @@ a:hover {
   }
 
   .custom-section {
-    @apply flex h-screen items-center justify-center;
+    @apply flex min-h-screen items-center justify-center;
   }
 
   .section-title {

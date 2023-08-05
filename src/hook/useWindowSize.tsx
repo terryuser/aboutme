@@ -29,4 +29,18 @@ const useWindowSize = () => {
   return windowSize;
 };
 
-export { useWindowSize };
+const useIsMobile = () => {
+  const { width } = useWindowSize();
+
+  if (!width) return false;
+  return width < 768;
+};
+
+const useIsTablet = () => {
+  const { width } = useWindowSize();
+
+  if (!width) return false;
+  return width >= 768 && width < 1024;
+};
+
+export { useWindowSize, useIsMobile, useIsTablet };

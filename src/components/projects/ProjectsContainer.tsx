@@ -13,8 +13,8 @@ import ProjectCard from "./ProjectCard";
 const ProjectsContainer: FC = () => {
   const settings: Props = {
     responsive: {
-      0: { items: 2 },
-      568: { items: 2 },
+      0: { items: 1 },
+      768: { items: 2 },
       1024: { items: 4 },
     },
     autoPlay: true,
