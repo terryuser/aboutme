@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/aboutme/static/css/main.9712352e.css",
-    "main.js": "/aboutme/static/js/main.8360281c.js",
+    "main.css": "/aboutme/static/css/main.e72823c0.css",
+    "main.js": "/aboutme/static/js/main.96462d53.js",
     "static/js/787.cf53e342.chunk.js": "/aboutme/static/js/787.cf53e342.chunk.js",
+    "static/media/ws.png": "/aboutme/static/media/ws.af8c4a83e0fefdaaaea1.png",
+    "static/media/twc.png": "/aboutme/static/media/twc.8808d238e9811ec6a6fb.png",
+    "static/media/tourist.png": "/aboutme/static/media/tourist.c705ccb33740fd31e29f.png",
+    "static/media/robots.png": "/aboutme/static/media/robots.906eafb0d4bb49f97329.png",
+    "static/media/recipes.png": "/aboutme/static/media/recipes.fcbd2a28c4566e06a64c.png",
+    "static/media/tdc.png": "/aboutme/static/media/tdc.c8ce4ae8ec00eeea5de0.png",
+    "static/media/cellularNews.png": "/aboutme/static/media/cellularNews.bba3a867e99bafc7f31e.png",
     "index.html": "/aboutme/index.html",
-    "main.9712352e.css.map": "/aboutme/static/css/main.9712352e.css.map",
-    "main.8360281c.js.map": "/aboutme/static/js/main.8360281c.js.map",
+    "main.e72823c0.css.map": "/aboutme/static/css/main.e72823c0.css.map",
+    "main.96462d53.js.map": "/aboutme/static/js/main.96462d53.js.map",
     "787.cf53e342.chunk.js.map": "/aboutme/static/js/787.cf53e342.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9712352e.css",
-    "static/js/main.8360281c.js"
+    "static/css/main.e72823c0.css",
+    "static/js/main.96462d53.js"
   ]
 }
