@@ -1,19 +1,16 @@
 import { FC } from "react";
+import { useLocation } from "react-router-dom";
 import { NavItems } from "@components/header";
 import { NavItemsList } from "@constant/header";
-import { NavItemProps } from "@components/header/nav/type";
 
 import { LayoutGroup } from "framer-motion";
 
 import { useGlobalContext } from "@src/context/GlobalContext";
 
 const NavMenu: FC = () => {
-  const { location, setLocation } = useGlobalContext();
+  const location = useLocation();
 
-  const onClick = ({ label }: NavItemProps) => {
-    setLocation(label);
-    console.log("label", label);
-  };
+  const { setHashScrolling } = useGlobalContext();
 
   return (
     <div>
@@ -21,8 +18,7 @@ const NavMenu: FC = () => {
         <LayoutGroup>
           {NavItemsList.map((item) => (
             <NavItems
-              onClick={onClick}
-              isCurrent={location === item.label}
+              isCurrent={checkIsCurrent(location.hash, item.sectionID)}
               {...item}
             />
           ))}
@@ -33,3 +29,9 @@ const NavMenu: FC = () => {
 };
 
 export default NavMenu;
+
+export function checkIsCurrent(currentHash: string, itemID: string) {
+  const isHomeHash = currentHash === "#" || !currentHash || currentHash === "";
+  if (isHomeHash && itemID === NavItemsList[0].sectionID) return true;
+  return currentHash === `#${itemID}`;
+}

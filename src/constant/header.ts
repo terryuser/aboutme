@@ -1,24 +1,24 @@
-import { NavItemProps } from "@components/header/type";
+import { NavItemProps } from "@components/header/nav/type";
 
 const NavItemsList = [
   {
-    label: "home",
-    path: "#",
-    pageTitle: "Home",
+    label: "aboutMe",
+    sectionID: "section-aboutMe",
+    pageTitle: "About Me",
   },
   {
-    label: "info",
-    path: "#info",
-    pageTitle: "Info",
+    label: "skills",
+    sectionID: "section-skills",
+    pageTitle: "Skills",
   },
   {
     label: "projects",
-    path: "#projects",
+    sectionID: "section-projects",
     pageTitle: "Projects",
   },
   {
     label: "contact",
-    path: "#contact",
+    sectionID: "section-contact",
     pageTitle: "Contact",
   },
 ] as NavItemProps[];

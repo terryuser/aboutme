@@ -6,8 +6,6 @@ import AliceCarousel, { Props } from "react-alice-carousel";
 
 import { ProjectDtls } from "@constant/projects";
 
-// import styles from "@styles/module/homepage/Projects.module.scss";
-
 import ProjectCard from "./ProjectCard";
 
 const ProjectsContainer: FC = () => {

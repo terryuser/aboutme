@@ -20,7 +20,7 @@ export const Desc: FC = () => {
         className="text-md text-white"
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <Button className="mt-3" content="About me" onClick={handleClick} />
+      <Button className="mt-3" content="Know me more" onClick={handleClick} />
     </div>
   );
 };

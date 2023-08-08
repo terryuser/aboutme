@@ -4,11 +4,13 @@ import SkillCard from "./SkillCard";
 
 import { SkillSet } from "@constant/skills";
 
+import SectionHOC from "@src/hoc/SectionHOC";
+
 interface SkillsProps {}
 
 const Skills: FC<SkillsProps> = () => {
   return (
-    <section className="custom-section" id="section-skills">
+    <SectionHOC sectionID="section-skills">
       <div className="container">
         <div className="mx-auto mb-2 w-2/3 text-center">
           <Desc />
@@ -19,7 +21,7 @@ const Skills: FC<SkillsProps> = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionHOC>
   );
 };
 

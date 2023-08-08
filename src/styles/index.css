@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  overflow: auto;
   margin: 0;
   font-family: "Bai Jamjuree", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

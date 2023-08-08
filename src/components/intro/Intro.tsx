@@ -1,16 +1,14 @@
 import { FC, useRef } from "react";
 
-import { useGlobalContext } from "@src/context/GlobalContext";
-
 import { useIsMobile, useIsTablet } from "@hook/useWindowSize";
 
 import { HomeIcon, Desc } from ".";
 
+import SectionHOC from "@src/hoc/SectionHOC";
+
 const HomeIntro: FC = () => {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
-
-  const { headerHeight } = useGlobalContext();
 
   const iconWrapperRef = useRef<HTMLDivElement>(null);
 
@@ -22,12 +20,7 @@ const HomeIntro: FC = () => {
   };
 
   return (
-    <section
-      className="custom-section"
-      style={{
-        marginTop: isMobile || isTablet ? headerHeight : headerHeight + 50,
-      }}
-    >
+    <SectionHOC sectionID="section-aboutMe">
       <div className="container">
         <div className="block lg:grid grid-cols-2 gap-2 p-5">
           <div
@@ -55,7 +48,7 @@ const HomeIntro: FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionHOC>
   );
 };
 

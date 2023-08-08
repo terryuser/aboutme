@@ -1,5 +1,5 @@
 export type NavItemProps = {
-    label: string
-    path: string
-    pageTitle: string
-}
+  label: string;
+  sectionID: string;
+  pageTitle: string;
+};

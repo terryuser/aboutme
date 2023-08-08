@@ -8,7 +8,7 @@ export const MobileNav: FC = () => {
   return (
     <>
       <Hamburger color="white" hideOutline toggled={isOpen} toggle={setOpen} />
-      <MobileNavMenu />
+      <MobileNavMenu open={isOpen} toggle={setOpen} />
     </>
   );
 };

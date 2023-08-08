@@ -3,9 +3,11 @@ import { FC } from "react";
 import { Desc } from "./Desc";
 import ProjectsContainer from "./ProjectsContainer";
 
+import SectionHOC from "@src/hoc/SectionHOC";
+
 const Projects: FC = () => {
   return (
-    <section className="custom-section">
+    <SectionHOC sectionID="section-projects">
       <div className="container">
         <div className="mx-auto mb-2 w-2/3 text-center">
           <Desc />
@@ -14,7 +16,7 @@ const Projects: FC = () => {
           <ProjectsContainer />
         </div>
       </div>
-    </section>
+    </SectionHOC>
   );
 };
 
