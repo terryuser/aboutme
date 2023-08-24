@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useGlobalContext } from "@src/context/GlobalContext";
 import { useInView } from "react-intersection-observer";
 import { useIsMobile, useIsTablet } from "@hook/useWindowSize";
-import { useIsScrolling } from "@hook/useScrolling";
+import { UpdateHashLocation } from "@src/hook/useHashUpdater";
 
 interface SectionHOCPropsType {
   sectionID: string;
@@ -25,7 +25,7 @@ const SectionHOC: FC<SectionHOCPropsType> = ({
   const { headerHeight } = useGlobalContext();
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   useEffect(() => {
@@ -33,6 +33,8 @@ const SectionHOC: FC<SectionHOCPropsType> = ({
 
     console.log("section in view", sectionID);
     // window.location.hash = `#${sectionID}`;
+
+    UpdateHashLocation(sectionID);
   }, [inView]);
 
   const styleScript = isFirst

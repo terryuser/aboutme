@@ -20,7 +20,7 @@ const HomeIntro: FC = () => {
   };
 
   return (
-    <SectionHOC sectionID="section-aboutMe">
+    <SectionHOC sectionID="section-about">
       <div className="container">
         <div className="block lg:grid grid-cols-2 gap-2 p-5">
           <div

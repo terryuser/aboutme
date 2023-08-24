@@ -3,7 +3,7 @@ import { NavItemProps } from "@components/header/nav/type";
 const NavItemsList = [
   {
     label: "aboutMe",
-    sectionID: "section-aboutMe",
+    sectionID: "section-about",
     pageTitle: "About Me",
   },
   {
@@ -16,11 +16,11 @@ const NavItemsList = [
     sectionID: "section-projects",
     pageTitle: "Projects",
   },
-  {
-    label: "contact",
-    sectionID: "section-contact",
-    pageTitle: "Contact",
-  },
+  // {
+  //   label: "contact",
+  //   sectionID: "section-contact",
+  //   pageTitle: "Contact",
+  // },
 ] as NavItemProps[];
 
 export { NavItemsList };
